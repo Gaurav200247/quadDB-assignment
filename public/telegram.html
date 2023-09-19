@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram</title>
+  </head>
+
+  <!-- tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- normal css -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- google fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+    rel="stylesheet"
+  />
+
+  <body class="bg-[#181d29] text-white">
+    <!-- NAVBAR -->
+    <header class="w-full p-8 px-10 flex justify-between items-center">
+      <!-- logo -->
+      <img src="/logo.png" alt="logo" class="w-[22%]" />
+
+      <!-- nav options -->
+      <div class="w-[24%] flex justify-end items-center">
+        <!-- theme-toggle-btn -->
+        <div
+          class="flex justify-between items-center rounded-xl px-3 py-2 bg-zinc-700 w-[5rem]"
+        >
+          <button>ON</button>
+          <button>OFF</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex flex-col justify-center items-center text-center p-5">
+      <h1 class="text-[2.8rem] flex justify-between items-center">
+        Connect
+        <img
+          src="/telegram_logo.png"
+          alt="telegram logo"
+          class="w-[2rem] mx-3"
+        />
+        Telegram
+      </h1>
+      <br />
+
+      <h2 class="text-[1.8rem]">Add bot to your group</h2>
+      <br />
+
+      <h3 class="text-[1.3rem]">Manual :</h3>
+
+      1. Open the telegram app. <br />
+      2. Open the group you want to add the bot to. <br />
+      3. Click on add members in group settings. <br />
+      4. Search @HodlInfoBot and click it. <br />
+      <br />
+
+      <h3 class="text-[1.3rem]">Automatic :</h3>
+
+      Go to : https://t.me/HodlInfoBot?startgroup=true <br />
+      <br />
+
+      <h2 class="text-[1.8rem]">Chat with the bot</h2>
+      <br />
+
+      <h3 class="text-[1.3rem]">Manual :</h3>
+
+      1. Open the telegram app. <br />
+      2. Click on new message button. <br />
+      3. In search bar type HodlInfoBot. <br />
+      4. Click on @HodlInfoBot. <br />
+      <br />
+
+      <h3 class="text-[1.3rem]">Automatic :</h3>
+
+      Go to : https://t.me/HodlInfoBot
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="flex flex-col justify-between items-center w-full min-h-[15vh]"
+    >
+      <p
+        class="w-full flex justify-between items-center text-[0.9rem] p-3 text-zinc-400 border-t-2 border-zinc-800"
+      >
+        <span>Copyright © 2019 HodlInfo.com</span>
+        <span>Support</span>
+      </p>
+
+      <button
+        class="fixed bottom-[1px] bg-[#181d29] border-[1px] border-[#3cc7c1ff] text-[#3cc7c1ff] px-4 py-2 text-[1rem] rounded-md duration-300 hover:bg-[#3cc7c1ff] hover:text-white"
+      >
+        Add hodlinfo to home screen
+      </button>
+    </footer>
+  </body>
+</html>

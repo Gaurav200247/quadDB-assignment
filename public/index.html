@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuaDB Tech Assignment</title>
+  </head>
+
+  <!-- tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- normal css -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- google fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+    rel="stylesheet"
+  />
+
+  <body class="darkTheme">
+    <!-- NAVBAR -->
+    <header
+      class="w-full p-8 px-10 flex flex-col md:flex-row justify-between items-center md:items-start"
+    >
+      <!-- logo -->
+      <img src="/logo.png" alt="logo" class="w-[80%] md:w-[35%] lg:w-[20%]" />
+
+      <!-- select options container -->
+      <div
+        class="w-full md:w-[25%] my-3 md:my-0 flex justify-center items-center flex-wrap"
+      >
+        <select class="Nav_Select_CSS">
+          <option value="INR">INR</option>
+        </select>
+
+        <select class="Nav_Select_CSS" id="base_units-selector">
+          <option value="BTC">BTC</option>
+          <option value="eos">EOS</option>
+          <option value="eth">ETH</option>
+          <option value="nuls">NULS</option>
+          <option value="req">REQ</option>
+          <option value="trx">TRX</option>
+          <option value="xrp">XRP</option>
+          <option value="zil">ZIL</option>
+          <option value="zrx">ZRX</option>
+        </select>
+
+        <a href="https://wazirx.com/invite/sp7pvbt6" class="Nav_Select_CSS"
+          >BUY BTC</a
+        >
+      </div>
+
+      <!-- nav options -->
+      <div
+        class="w-[90%] my-3 md:my-0 md:w-[35%] lg:w-[24%] flex justify-between items-center"
+      >
+        <!-- countdown timer -->
+        <div
+          class="border-4 border-white rounded-full w-[2.5rem] h-[2.5rem] flex justify-center items-center"
+        >
+          <p class="text-[#3cc7c1ff]" id="timer">60</p>
+        </div>
+
+        <!-- telegram link btn-->
+        <a
+          href="/telegram.html"
+          class="w-[11rem] truncate flex justify-center items-center bg-[#3cc7c1ff] p-2 px-5 mx-3 rounded-xl text-[0.9rem]"
+        >
+          <img
+            src="/telegram_logo.png"
+            alt="telegram logo"
+            class="w-[1.1rem] mr-3"
+          />
+          Connect Telegram
+        </a>
+
+        <!-- theme-toggle-btn -->
+        <div
+          class="flex justify-between items-center rounded-3xl bg-zinc-700 w-[4rem] overflow-hidden text-white shadow-xl"
+        >
+          <button
+            id="ON"
+            class="active w-1/2 px-3 py-2 h-[2rem] w-[2rem]"
+          ></button>
+          <button id="OFF" class="w-1/2 px-3 py-2 h-[2rem] w-[2rem]"></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex flex-col justify-start items-center w-full min-h-[40vh]">
+      <p class="text-[1.3rem] lg:text-[2rem] text-zinc-500">
+        Best Price to Trade
+      </p>
+
+      <!-- Stats line -->
+      <div class="flex justify-around items-center w-[90%] md:w-full">
+        <div class="single_stat">
+          <h1>0.18 %</h1>
+          <h4>5 mins</h4>
+        </div>
+
+        <div class="single_stat">
+          <h1>0.55 %</h1>
+          <h4>1 HOUR</h4>
+        </div>
+
+        <div class="flex flex-col justify-between items-center">
+          <h1 class="text-[2.5rem] lg:text-[6rem]" id="Avg_Trade_Number">
+            ₹ 25,03,223
+          </h1>
+          <p class="text-zinc-500 text-[0.9rem] lg:text-[1.2rem] text-center">
+            Average BTC/INR net price including commission
+          </p>
+        </div>
+
+        <div class="single_stat">
+          <h1>8.28 %</h1>
+          <h4>1 Day</h4>
+        </div>
+
+        <div class="single_stat">
+          <h1>18.11 %</h1>
+          <h4>7 Days</h4>
+        </div>
+      </div>
+
+      <!-- data list table -->
+      <div class="p-3 md:p-10 w-full text-white">
+        <div class="w-full" id="Data_Table"></div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="flex flex-col justify-between items-center w-full min-h-[15vh]"
+    >
+      <p
+        class="w-full flex justify-between items-center text-[0.9rem] p-3 text-zinc-400 border-t-2 border-zinc-800"
+      >
+        <span>Copyright © 2019 HodlInfo.com</span>
+        <span>Support</span>
+      </p>
+
+      <button
+        class="fixed bottom-[1px] bg-[#181d29] border-[1px] border-[#3cc7c1ff] text-[#3cc7c1ff] px-4 py-2 text-[1rem] rounded-md duration-300 hover:bg-[#3cc7c1ff] hover:text-white"
+      >
+        Add hodlinfo to home screen
+      </button>
+    </footer>
+  </body>
+
+  <!-- JS -->
+  <script type="module" src="main.js"></script>
+</html>
