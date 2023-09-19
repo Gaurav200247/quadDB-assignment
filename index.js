@@ -10,7 +10,6 @@ const DataRouter = require("./Router/DataRouter");
 const app = express();
 
 // routes
-app.use(express.static("./public/assets"));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
@@ -21,6 +20,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1", DataRouter);
+
+app.use(express.static("./public/assets"));
 
 // app listening
 const PORT = process.env.PORT || 4000;
