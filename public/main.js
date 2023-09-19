@@ -53,8 +53,8 @@
         }' >
         ${
           Math.trunc(item.sell - item.buy) < 500
-            ? "<img src='/down.png' alt='down' />"
-            : "<img src='/up.png' alt='up' />"
+            ? "<img src='./assets/down.png' alt='down' />"
+            : "<img src='./assets/up.png' alt='up' />"
         }
         
         ₹ ${Math.trunc(item.sell - item.buy)}</li>

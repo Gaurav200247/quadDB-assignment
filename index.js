@@ -11,14 +11,18 @@ const path = require("path");
 const app = express();
 
 // routes
-app.use(express.static(path.join(__dirname, "./public/assets")));
 app.use(express.static(path.join(__dirname, "./public")));
+
+app.get("/main.js", (req, res) => {
+  res.type("application/javascript");
+  res.sendFile(__dirname + "/public/main.js");
+});
 
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./public/index.html"));
 });
 
-app.get("/", (req, res) => {
+app.get("/welcome", (req, res) => {
   res.send("Welcome to my app");
 });
 
