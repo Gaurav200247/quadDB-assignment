@@ -21,9 +21,9 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./client/app.html"));
 });
 
-app.get("/", (req, res) => {
-  res.send("Welcome to my app");
-});
+// app.get("/", (req, res) => {
+//   res.send("Welcome to my app");
+// });
 
 // app listening
 const PORT = process.env.PORT || 4000;
