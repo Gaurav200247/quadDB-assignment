@@ -14,16 +14,16 @@ const app = express();
 app.use("/", express.static(path.join(__dirname, "/public")));
 
 // api routes
-app.get("/welcome", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Welcome to my app");
 });
 
 app.use("/api/v1", DataRouter);
 
 // index.html
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./public/index.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "./public/index.html"));
+// });
 
 // app listening
 const PORT = process.env.PORT || 4000;
