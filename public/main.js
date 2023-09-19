@@ -1,11 +1,11 @@
 (async () => {
-  const URL = "http://localhost:4000/api/v1/data";
+  const URL = "/api/v1/data";
 
   const getData = async () => {
     try {
       const resp = await fetch(URL);
       const { data } = await resp.json();
-
+      console.log({ URL });
       console.log(data);
 
       return data;
