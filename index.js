@@ -12,6 +12,10 @@ const app = express();
 // routes
 // app.use(express.static("./public"));
 
+app.get("/", (req, res) => {
+  res.send("Welcome to my app");
+});
+
 app.use("/api/v1", DataRouter);
 
 // app listening
