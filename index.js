@@ -10,7 +10,7 @@ const DataRouter = require("./Router/DataRouter");
 const app = express();
 
 // routes
-app.use(express.static("./public"));
+app.use(express.static("./public/assets"));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
