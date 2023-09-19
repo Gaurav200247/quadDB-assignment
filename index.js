@@ -10,7 +10,11 @@ const DataRouter = require("./Router/DataRouter");
 const app = express();
 
 // routes
-// app.use(express.static("./public"));
+app.use(express.static("./public"));
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 app.get("/", (req, res) => {
   res.send("Welcome to my app");
