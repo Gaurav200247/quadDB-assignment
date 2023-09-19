@@ -8,10 +8,6 @@ const connectDB = require("./DB/connectDB");
 const DataRouter = require("./Router/DataRouter");
 
 const app = express();
-const cors = require("cors");
-
-// cors
-app.use(cors());
 
 // routes
 app.use(express.static("./public"));
