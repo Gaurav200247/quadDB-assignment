@@ -10,7 +10,7 @@ const path = require("path");
 
 const app = express();
 
-// routes
+// static files
 app.use(express.static(path.join(__dirname, "./public")));
 
 app.get("/main.js", (req, res) => {
@@ -18,10 +18,12 @@ app.get("/main.js", (req, res) => {
   res.sendFile(__dirname + "/public/main.js");
 });
 
+// index.html
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./public/index.html"));
 });
 
+// api routes
 app.get("/welcome", (req, res) => {
   res.send("Welcome to my app");
 });
