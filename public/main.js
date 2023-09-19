@@ -5,8 +5,8 @@
     try {
       const resp = await fetch(URL);
       const { data } = await resp.json();
-      console.log({ URL });
-      console.log(data);
+      // console.log({ URL });
+      // console.log(data);
 
       return data;
     } catch (error) {
@@ -17,7 +17,7 @@
 
   const tabel_Data = await getData();
 
-  console.log(tabel_Data);
+  // console.log(tabel_Data);
 
   const tableElement = document.getElementById("Data_Table");
   tableElement.innerHTML = `<ul class="text-zinc-400 table_row bg-transparent">
@@ -53,8 +53,8 @@
         }' >
         ${
           Math.trunc(item.sell - item.buy) < 500
-            ? "<img src='./assets/down.png' alt='down' />"
-            : "<img src='./assets/up.png' alt='up' />"
+            ? "<img src='/assets/down.png' alt='down' />"
+            : "<img src='/assets/up.png' alt='up' />"
         }
         
         ₹ ${Math.trunc(item.sell - item.buy)}</li>
@@ -64,7 +64,7 @@
     Total_Last_trade = Total_Last_trade + parseInt(item.last);
   });
 
-  console.log({ Total_Last_trade });
+  // console.log({ Total_Last_trade });
 
   const numberString = Math.trunc(Total_Last_trade / 10).toString();
   const formattedNumber = numberString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
