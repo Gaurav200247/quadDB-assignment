@@ -1,5 +1,6 @@
-// Config
-require("dotenv").config();
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config();
+}
 
 require("express-async-errors");
 
@@ -17,7 +18,7 @@ app.use("/api/v1", DataRouter);
 
 // index.html
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./client/index.html"));
+  res.sendFile(path.resolve(__dirname, "./client/app.html"));
 });
 
 app.get("/", (req, res) => {
