@@ -16,7 +16,7 @@ app.use("/", express.static(path.join(__dirname, "/client")));
 app.use("/api/v1", DataRouter);
 
 // index.html
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./client/index.html"));
 });
 
